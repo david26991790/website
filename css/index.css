@@ -1,0 +1,224 @@
+body {
+    background-color: lightgray;
+}
+
+
+#root {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 200px;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+}
+
+#layout header {
+    grid-area: header;
+    background-color: antiquewhite;
+}
+
+#layout main {
+    grid-area: content;
+    background-color: cornsilk
+}
+
+#layout footer {
+    grid-area: footer;
+    background-color: honeydew;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#cards section {
+    flex: 0 1 100%;
+    border: 1px black solid;
+}
+
+#cards section.s1 {
+    background-color: blueviolet;
+}
+
+#cards section.s2 {
+    background-color: brown;
+}
+
+#cards h1 {
+    text-align: center;
+    margin: 2em 0em;
+}
+
+header h2 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 2em;
+    margin-top: 4em;
+}
+
+header img {
+    display: block;
+    margin: 1em auto 2em;
+}
+#footer ul{
+    margin: 5em 5em 5em 5em;
+padding: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+}
+#footer ul a:link{
+color: rgb(153, 41, 41);
+}
+#footer ul a:hover{
+color: rgb(198, 50, 50);
+}
+
+h3{
+    text-align: center;
+    font-size: xx-small;
+    color: rgb(128, 128, 128);
+}
+#cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* The card sections */
+#cards section{
+    flex: 0 1 100%;
+    padding:2em;
+}
+
+#cards section .card{
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+
+#cards .card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#cards .card .cardTitle{
+    flex:0 1 200px;
+}
+
+#cards .card .cardText{
+    flex:0 1 100px;
+    padding: 1em;
+}
+
+#cards .card .cardFooter{
+    flex:0 1 50px;
+}
+
+#cards .cardFooter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:0 1em;  
+}
+#cards .cardFooter .view{
+    flex:0 1 auto;
+    
+    padding:0.5em;
+    border-radius: 0.4em 0 0 0.4em;
+}
+#cards .cardFooter .edit{
+    flex:0 1 auto;
+    
+    padding:0.5em;
+    border-radius: 0 0.4em 0.4em 0;
+}
+
+#cards .cardFooter a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid rgb(127, 126, 126);
+    background-color: lightgray;
+    color:white;
+    font-size: 0.8em;
+}
+
+#cards .cardFooter a:hover{
+    color:black;
+}
+
+#cards .cardFooter span{
+    flex:0 1 auto;
+    margin-left:auto;
+    padding:0.5em;
+    font-size: 0.8em;
+    color: rgb(126,126,126)
+}
+
+/* The header titles */
+header h2 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em;
+    color: rgb(106, 106, 106);
+    margin-top:2em;  
+}
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #root {
+        width: 100%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #root {
+        max-width: 720px;
+    }
+
+    #cards section {
+        flex: 0 1 50%
+    }
+}
+
+
+@media (min-width: 992px) {
+    #root {
+        max-width: 960px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    #root {
+        max-width: 1140px;
+    }
+
+    #cards section {
+        flex: 1 1 33%;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    #root {
+        max-width: 1320px;
+    }
+}
